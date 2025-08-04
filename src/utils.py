@@ -57,14 +57,12 @@ def divide(a: [int, float, str] ,  b:  [int, float, str]) -> float:
         raise ZeroDivisionError
 
 def modulo(a: [int, str, float], b: [int, str, float]):
-    ...
-
+    '''
     Args:
     a: int the number to be divided
     b: int the divisor
 
-    Returns:
-    float
+    Returns: float
     '''
 
     # I think this could be made more efficient?
@@ -74,8 +72,6 @@ def modulo(a: [int, str, float], b: [int, str, float]):
 
 def element_wise_multiply(a: np.array, b: np.array) -> np.array:
     '''
-    ...
-
     Args:
     a: np.array
     b: np.array
@@ -83,16 +79,14 @@ def element_wise_multiply(a: np.array, b: np.array) -> np.array:
     Returns:
     np.array
     '''
-
     # let's hope that both vectors have the same shape
-    if a.shape()==b.shape():
+    if a.shape==b.shape:
         return np.multiply(a, b)
     else:
         raise ValueError
     
 def return_hexadecimal(a: int) -> float:
     '''
-    ...
 
     Args:
     a: float
@@ -107,8 +101,6 @@ def return_hexadecimal(a: int) -> float:
 
 def return_random_number() -> int:
     '''
-    ...
-
     Args:
     a: float
     b: float
