@@ -17,6 +17,9 @@ def sum(a: int, b: int) -> int:
     '''
     return a + b
 
+def sum(c: int, d: int) -> int:
+    return c + d 
+
 def multiply(a, b) -> float:
     '''
     This function returns the product of two numbers
@@ -44,17 +47,16 @@ def divide(a: [int, float, str] ,  b:  [int, float, str]) -> float:
     Raises:
     ValueError: if inputs cannot be converted to float or division by zero occurs
     '''
-    try:
-        a = float(a)
+    try: 
         b = float(b)
-        return a / b
-    except ValueError:
-        raise ValueError("Inputs must be numbers or numeric strings.")
-    except ZeroDivisionError:
-        raise ZeroDivisionError("Division by zero is not allowed.")
+    except:
+        raise ValueError("input b can't be interpreted as a number")
+    try:
+        return float(a) / float(b)
+    except:
+        raise ZeroDivisionError
 
-def modulo(a: int, b: int):
-    '''
+def modulo(a: [int, str, float], b: [int, str, float]):
     ...
 
     Args:
@@ -83,9 +85,11 @@ def element_wise_multiply(a: np.array, b: np.array) -> np.array:
     '''
 
     # let's hope that both vectors have the same shape
-
-    return np.multiply(a, b)
-
+    if a.shape()==b.shape():
+        return np.multiply(a, b)
+    else:
+        raise ValueError
+    
 def return_hexadecimal(a: int) -> float:
     '''
     ...
