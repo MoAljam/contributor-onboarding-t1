@@ -109,7 +109,7 @@ def return_hexadecimal(a: Union[int, float, str]) -> float:
     return hex(a)
 
 
-def return_random_number() -> int:
+def return_random_number(a: Union[int, float, str], b: Union[int, float, str]) -> int:
     """
     Args:
     a: float
@@ -119,4 +119,10 @@ def return_random_number() -> int:
     float
     """
 
-    return np.random.randint(0, 50)
+    if isinstance(a, str):
+        a = float(a)
+    if isinstance(b, str):
+        b = float(b)
+
+    # return random float between a and b
+    return np.random.uniform(a, b)
