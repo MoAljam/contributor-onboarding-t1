@@ -33,16 +33,19 @@ def multiply(a, b) -> float:
     '''
     return a * b
 
-def divide(a: float, b: float) -> float:
+def divide(a: [int, float, str] ,  b:  [int, float, str]) -> float:
     '''
-    ...
+    Divides two numbers, accepting float, int, or numeric strings.
 
     Args:
-    a: float the number to be divided
-    b: float the divisor
+    a: float , int , str - the number to be divided
+    b: float , int , str - the divisor
 
     Returns:
-    float
+    float - the result of the division
+
+    Raises:
+    ValueError: if inputs cannot be converted to float or division by zero occurs
     '''
     try: 
         b = float(b)
@@ -54,7 +57,6 @@ def divide(a: float, b: float) -> float:
         raise ZeroDivisionError
 
 def modulo(a: [int, str, float], b: [int, str, float]):
-    '''
     ...
 
     Args:
@@ -115,4 +117,4 @@ def return_random_number() -> int:
     float
     '''
 
-    return np.random.randint(0, 100)
+    return np.random.randint(0, 50)
