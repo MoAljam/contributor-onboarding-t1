@@ -5,6 +5,7 @@
 .python-version
 .venv
 venv
+#something
 
 # General ignores for macOS
 .DS_Store
