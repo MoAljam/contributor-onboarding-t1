@@ -46,7 +46,6 @@ def divide(a: float, b: float) -> float:
     except:
         raise ValueError("input b can't be interpreted as a number")
     try:
-
         return float(a) / float(b)
     except:
         raise ZeroDivisionError
@@ -81,9 +80,11 @@ def element_wise_multiply(a: np.array, b: np.array) -> np.array:
     '''
 
     # let's hope that both vectors have the same shape
-
-    return np.multiply(a, b)
-
+    if a.shape()==b.shape():
+        return np.multiply(a, b)
+    else:
+        raise ValueError
+    
 def return_hexadecimal(a: int) -> float:
     '''
     ...
