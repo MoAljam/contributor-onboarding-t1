@@ -41,7 +41,10 @@ def divide(a: float, b: float) -> float:
     Returns:
     float
     '''
-    return a / b
+    try:
+        return a / b
+    except:
+        raise ValueError("dividion by zero")
 
 def modulo(a: int, b: int):
     '''
