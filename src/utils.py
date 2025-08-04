@@ -17,6 +17,9 @@ def sum(a: int, b: int) -> int:
     '''
     return a + b
 
+def sum(c: int, d: int) -> int:
+    return c + d 
+
 def multiply(a, b) -> float:
     '''
     This function returns the product of two numbers
@@ -30,29 +33,36 @@ def multiply(a, b) -> float:
     '''
     return a * b
 
-def divide(a: float, b: float) -> float:
+def divide(a: [int, float, str] ,  b:  [int, float, str]) -> float:
     '''
-    ...
+    Divides two numbers, accepting float, int, or numeric strings.
 
     Args:
-    a: float the number to be divided
-    b: float the divisor
+    a: float , int , str - the number to be divided
+    b: float , int , str - the divisor
 
     Returns:
-    float
-    '''
-    return a / b
+    float - the result of the division
 
-def modulo(a: int, b: int):
+    Raises:
+    ValueError: if inputs cannot be converted to float or division by zero occurs
     '''
-    ...
+    try: 
+        b = float(b)
+    except:
+        raise ValueError("input b can't be interpreted as a number")
+    try:
+        return float(a) / float(b)
+    except:
+        raise ZeroDivisionError
 
+def modulo(a: [int, str, float], b: [int, str, float]):
+    '''
     Args:
     a: int the number to be divided
     b: int the divisor
 
-    Returns:
-    float
+    Returns: float
     '''
 
     # I think this could be made more efficient?
@@ -62,8 +72,6 @@ def modulo(a: int, b: int):
 
 def element_wise_multiply(a: np.array, b: np.array) -> np.array:
     '''
-    ...
-
     Args:
     a: np.array
     b: np.array
@@ -71,17 +79,17 @@ def element_wise_multiply(a: np.array, b: np.array) -> np.array:
     Returns:
     np.array
     '''
-
     # let's hope that both vectors have the same shape
-    if a.shape() == b.shape():
+
+    if a.shape==b.shape:
+
         return np.multiply(a, b)
     else:
         raise ValueError
     
-    
+
 def return_hexadecimal(a: int) -> float:
     '''
-    ...
 
     Args:
     a: float
@@ -96,8 +104,6 @@ def return_hexadecimal(a: int) -> float:
 
 def return_random_number() -> int:
     '''
-    ...
-
     Args:
     a: float
     b: float
@@ -106,4 +112,4 @@ def return_random_number() -> int:
     float
     '''
 
-    return np.random.randint(0, 100)
+    return np.random.randint(0, 50)
