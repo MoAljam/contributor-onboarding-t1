@@ -30,7 +30,7 @@ def multiply(a, b) -> float:
     '''
     return a * b
 
-def divide(a: float, b: float) -> float:
+def divide(a: [int, float, str] ,  b:  [int, float, str]) -> float:
     '''
     Divides two numbers, accepting float, int, or numeric strings.
 
