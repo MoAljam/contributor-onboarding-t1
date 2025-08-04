@@ -25,7 +25,7 @@ extra_javascript: [
         "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js",
     ]
 
-site_name: Contributor Onboarding
+site_name: Contributor Onboarding - t1
 repo_url: "https://github.com/MoAljam/contributor-onboarding-t1"
 
 nav:
