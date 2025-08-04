@@ -32,16 +32,26 @@ def multiply(a, b) -> float:
 
 def divide(a: float, b: float) -> float:
     '''
-    ...
+    Divides two numbers, accepting float, int, or numeric strings.
 
     Args:
-    a: float the number to be divided
-    b: float the divisor
+    a: float | int | str - the number to be divided
+    b: float | int | str - the divisor
 
     Returns:
-    float
+    float - the result of the division
+
+    Raises:
+    ValueError: if inputs cannot be converted to float or division by zero occurs
     '''
-    return a / b
+    try:
+        a = float(a)
+        b = float(b)
+        return a / b
+    except ValueError:
+        raise ValueError("Inputs must be numbers or numeric strings.")
+    except ZeroDivisionError:
+        raise ZeroDivisionError("Division by zero is not allowed.")
 
 def modulo(a: int, b: int):
     '''
