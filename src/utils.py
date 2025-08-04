@@ -35,8 +35,8 @@ def divide(a: float, b: float) -> float:
     Divides two numbers, accepting float, int, or numeric strings.
 
     Args:
-    a: float | int | str - the number to be divided
-    b: float | int | str - the divisor
+    a: float , int , str - the number to be divided
+    b: float , int , str - the divisor
 
     Returns:
     float - the result of the division
