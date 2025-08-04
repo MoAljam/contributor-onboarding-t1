@@ -1,0 +1,25 @@
+import unittest
+from division import divide
+
+class TestDivideFunction(unittest.TestCase):
+
+    def test_normal_division(self):
+        self.assertEqual(divide(10, 2), 5)
+
+    def test_division_by_zero(self):
+        with self.assertRaises(ZeroDivisionError):
+            divide(10, 0)
+
+    def test_negative_division(self):
+        self.assertEqual(divide(-10, 2), -5)
+        self.assertEqual(divide(10, -2), -5)
+        self.assertEqual(divide(-10, -2), 5)
+
+    def test_float_division(self):
+        self.assertAlmostEqual(divide(5, 2), 2.5)
+
+    def test_zero_numerator(self):
+        self.assertEqual(divide(0, 5), 0)
+
+if __name__ == "__main__":
+    unittest.main()
