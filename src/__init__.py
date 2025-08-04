@@ -1,1 +1,1 @@
-from utils import sum, multiply, divide
+from utils import *
