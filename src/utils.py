@@ -41,9 +41,17 @@ def divide(a: float, b: float) -> float:
     Returns:
     float
     '''
-    return a / b
+    try: 
+        b = float(b)
+    except:
+        raise ValueError("input b can't be interpreted as a number")
+    try:
 
-def modulo(a: int, b: int):
+        return float(a) / float(b)
+    except:
+        raise ZeroDivisionError
+
+def modulo(a: [int, str, float], b: [int, str, float]):
     '''
     ...
 
