@@ -1,5 +1,5 @@
 [project]
-name = "practice-project-t1"
+name = "practice_project_t1"
 description = "A practice project for open-source development"
 authors = [
 { name = "Your Name", email = "your.email@example.com" }
